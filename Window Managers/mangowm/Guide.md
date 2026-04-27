@@ -65,28 +65,28 @@ waybar -c ~/.config/mango/config.jsonc -s ~/.config/mango/style.css
 ## Main Keybinds
 | Shortcut | Action |
 |-------|--------|
-| `ALT + Enter` | Open foot |
-| `ALT + D` | wmenu launcher |
-| `ALT + Q` | Close window |
-| `ALT + R` | Reload config |
-| `ALT + SHIFT + F` | Open thunar |
-| `ALT + SHIFT + R` | Reload Waybar |
-| `ALT + S` | Screenshot |
-| `ALT + T` | Toggle floating |
-| `ALT + F` | Toggle fullscreen |
-| `ALT + N` | Cycle layouts |
-| `ALT + 0` | Toggle overview |
-| `ALT + 1-9` | Switch tag |
-| `ALT + Arrows` | Move focus |
-| `ALT + SHIFT + HJKL` | Swap windows |
-| `ALT + SHIFT + F` | Open Thunar |
+| `SUPER + Enter` | Open foot |
+| `SUPER + D` | wmenu launcher |
+| `SUPER + Q` | Close window |
+| `SUPER + R` | Reload config |
+| `SUPER + SHIFT + F` | Open thunar |
+| `SUPER + SHIFT + R` | Reload Waybar |
+| `SUPER + S` | Screenshot |
+| `SUPER + T` | Toggle floating |
+| `SUPER + F` | Toggle fullscreen |
+| `SUPER + N` | Cycle layouts |
+| `SUPER + 0` | Toggle overview |
+| `SUPER + 1-9` | Switch tag |
+| `SUPER + Arrows` | Move focus |
+| `SUPER + SHIFT + HJKL` | Swap windows |
+| `SUPER + SHIFT + F` | Open Thunar |
 
 ---
 ## Mouse
 | Shortcut | Action |
 |-------|--------|
-| `ALT + Left click` | Move floating window |
-| `ALT + Right click` | Resize window |
+| `SUPER + Left click` | Move floating window |
+| `SUPER + Right click` | Resize window |
 
 ---
 ## Reload everything
