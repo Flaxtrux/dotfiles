@@ -7,7 +7,7 @@ yay -S mangowc-git
 ```
 ### Pacman
 ```bash
-sudo pacman -S foot wmenu wl-clipboard grim slurp swaybg waybar thunar ttf-jetbrains-mono-nerd gnome-themes-extra
+sudo pacman -S foot wmenu wl-clipboard grim slurp swaybg waybar thunar ttf-jetbrains-mono-nerd gnome-themes-extra swaylock
 ```
 ## Git
 ```bash
@@ -30,19 +30,19 @@ git clone --depth=1 https://github.com/Flaxtrux/dotfiles.git ~/dotfiles
 ### 1. Mangowm
 Copy the main config file:
 ```bash
-cp "~/dotfiles/Window Managers/mangowm/config.conf" ~/.config/mango/config.conf
+cp ~/dotfiles/Window\ Managers/mangowm/config.conf ~/.config/mango/config.conf
 ```
 
 > [!note]
 > Personally I like to be able to read my keybinds easily so I do `ln -s ~/.config/mango/config.conf ~/config.conf`.
 ### 2. Rebar script
 ```bash
-cp "~/dotfiles/Window Managers/mangowm/rebar.sh" ~/.config/mango/rebar.sh
+cp ~/dotfiles/Window\ Managers/mangowm/rebar.sh ~/.config/mango/rebar.sh
 chmod +x ~/.config/mango/rebar.sh
 ```
 ### 3. Snip script (screenshots)
 ```bash
-sudo cp "~/dotfiles/Window Managers/mangowm/snip" /usr/local/bin/snip
+sudo cp ~/dotfiles/Window\ Managers/mangowm/snip /usr/local/bin/snip
 sudo chmod +x /usr/local/bin/snip
 ```
 ---
@@ -50,8 +50,10 @@ sudo chmod +x /usr/local/bin/snip
 
 Copy the config files:
 ```bash
-cp "~/dotfiles/Window Managers/mangowm/config.jsonc" ~/.config/mango/config.jsonc
-cp "~/dotfiles/Window Managers/mangowm/style.css" ~/.config/mango/style.css
+cp ~/dotfiles/Window\ Managers/mangowm/config.jsonc ~/.config/mango/config.jsonc
+cp ~/dotfiles/Window\ Managers/mangowm/style.css ~/.config/mango/style.css
+cp ~/dotfiles/Window\ Managers/mangowm/powermenu.sh ~/.config/mango/powermenu.sh
+chmod +x ~/.config/mango/powermenu.sh
 ```
 
 Launch manually to test:

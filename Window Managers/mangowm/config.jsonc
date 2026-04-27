@@ -19,6 +19,7 @@
         "custom/sep",
         "pulseaudio",
         "custom/sep",
+        "custom/power",
         "tray"
     ],
 
@@ -29,10 +30,12 @@
     },
     "cpu": {
         "format": "󰻠 {usage}%",
-        "tooltip": false
+        "tooltip": false,
+        "interval": 10
     },
     "memory": {
-        "format": "󰍛 {used:0.1f}G"
+        "format": "󰍛 {used:0.1f}G",
+        "interval": 10
     },
     "disk": {
         "interval": 60,
@@ -42,11 +45,14 @@
     "network": {
         "format-ethernet": "󰈀 {ipaddr}",
         "format-wifi": "󰤨 {essid} {ipaddr}",
-        "format-disconnected": "󰖪 Desconectado"
+        "format-disconnected": "󰖪 Desconectado",
+        "interval": 10
     },
     "pulseaudio": {
         "format": "󰕾 {volume}%",
         "format-muted": "󰝟 mute",
+        "scroll-step": 0,
+        "interval": 10,
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
     },
     "tray": {
@@ -55,5 +61,10 @@
     "custom/sep": {
         "format": "|",
         "interval": 0
+    },
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "~/.config/mango/powermenu.sh",
+        "tooltip": false
     }
 }

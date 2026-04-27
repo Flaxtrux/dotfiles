@@ -38,3 +38,7 @@ window#waybar {
 #battery.charging { color: #888888; }
 #battery.critical { color: #888888; }
 #network.disconnected { color: #888888; }
+#custom-power {
+    padding: 0 12px;
+    color: #888888;
+}
