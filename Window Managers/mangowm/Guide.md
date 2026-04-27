@@ -20,7 +20,8 @@ git clone --depth=1 https://github.com/Flaxtrux/dotfiles.git ~/dotfiles
 ├── config.conf       # Main window manager config
 ├── config.jsonc      # Waybar config
 ├── style.css         # Waybar styles
-└── rebar.sh          # Script to reload Waybar
+├── rebar.sh          # Script to reload Waybar
+└── powermenu.sh      # Script for power menu
 
 /usr/local/bin/
 └── snip              # Screenshot script
@@ -35,10 +36,12 @@ cp ~/dotfiles/Window\ Managers/mangowm/config.conf ~/.config/mango/config.conf
 
 > [!note]
 > Personally I like to be able to read my keybinds easily so I do `ln -s ~/.config/mango/config.conf ~/config.conf`.
-### 2. Rebar script
+### 2. Scripts for waybar
 ```bash
 cp ~/dotfiles/Window\ Managers/mangowm/rebar.sh ~/.config/mango/rebar.sh
 chmod +x ~/.config/mango/rebar.sh
+cp ~/dotfiles/Window\ Managers/mangowm/powermenu.sh ~/.config/mango/powermenu.sh
+chmod +x ~/.config/mango/powermenu.sh
 ```
 ### 3. Snip script (screenshots)
 ```bash
@@ -52,8 +55,6 @@ Copy the config files:
 ```bash
 cp ~/dotfiles/Window\ Managers/mangowm/config.jsonc ~/.config/mango/config.jsonc
 cp ~/dotfiles/Window\ Managers/mangowm/style.css ~/.config/mango/style.css
-cp ~/dotfiles/Window\ Managers/mangowm/powermenu.sh ~/.config/mango/powermenu.sh
-chmod +x ~/.config/mango/powermenu.sh
 ```
 
 Launch manually to test:
