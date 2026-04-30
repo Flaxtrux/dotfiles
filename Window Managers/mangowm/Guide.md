@@ -7,7 +7,7 @@ yay -S mangowc-git
 ```
 ### Pacman
 ```bash
-sudo pacman -S foot wmenu wl-clipboard grim slurp swaybg waybar thunar ttf-jetbrains-mono-nerd gnome-themes-extra swaylock
+sudo pacman -S emacs-wayland foot wmenu wl-clipboard grim slurp swaybg waybar thunar ttf-jetbrains-mono-nerd gnome-themes-extra swaylock
 ```
 ## Git
 ```bash
