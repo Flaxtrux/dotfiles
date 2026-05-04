@@ -3,7 +3,7 @@
 ### Dependencies
 ## Pacman
 ```bash
-sudo pacman -S emacs-wayland git adobe-source-code-pro-fonts
+sudo pacman -S emacs-wayland git adobe-source-code-pro-fonts tinymist
 ```
 Reload the font cache with `fc-cache -fv`.
 ### Clone spacemacs and dotfiles
