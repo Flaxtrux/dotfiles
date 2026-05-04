@@ -32,7 +32,7 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(
+   '(yaml
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
@@ -42,7 +42,7 @@ This function should only modify configuration layer settings."
      ;; better-defaults
      emacs-lisp
      helm
-     ;; lsp
+     lsp
      markdown
      multiple-cursors
      ;; org
@@ -581,6 +581,17 @@ before packages are loaded."
                  '(typst "https://github.com/uben0/tree-sitter-typst"))
     (unless (treesit-language-available-p 'typst)
       (treesit-install-language-grammar 'typst)))
+  (with-eval-after-load 'lsp-mode
+    (add-to-list 'lsp-language-id-configuration '(typst-ts-mode . "typst"))
+    (lsp-register-client
+     (make-lsp-client
+      :new-connection (lsp-stdio-connection "tinymist")
+      :activation-fn (lsp-activate-on "typst")
+      :major-modes '(typst-ts-mode)
+      :server-id 'tinymist)))
+  (add-hook 'typst-ts-mode-hook #'lsp)
+  (setq explicit-shell-file-name "/bin/bash")
+  (setq shell-file-name "/bin/bash")
   )
 
 
@@ -599,20 +610,20 @@ This function is called at the very end of Spacemacs initialization."
    '(package-selected-packages
      '(ace-link aggressive-indent all-the-icons auto-compile auto-highlight-symbol
                 avy-jump-helm-line centered-cursor-mode clean-aindent-mode
-                code-review column-enforce-mode define-word devdocs diminish
-                dired-quick-sort disable-mouse dotenv-mode drag-stuff dumb-jump
-                edit-indirect elisp-def elisp-demos elisp-slime-nav emr
+                code-review column-enforce-mode company define-word devdocs
+                diminish dired-quick-sort disable-mouse dotenv-mode drag-stuff
+                dumb-jump edit-indirect elisp-def elisp-demos elisp-slime-nav emr
                 eval-sexp-fu evil-anzu evil-args evil-cleverparens evil-collection
                 evil-easymotion evil-escape evil-evilified-state evil-exchange
                 evil-goggles evil-iedit-state evil-indent-plus evil-lion
                 evil-lisp-state evil-matchit evil-mc evil-nerd-commenter
                 evil-numbers evil-surround evil-textobj-line evil-tutor
                 evil-unimpaired evil-visual-mark-mode evil-visualstar
-                expand-region eyebrowse fancy-battery gh-md git-link git-messenger
-                git-modes git-timemachine gitignore-templates golden-ratio
-                google-translate helm-ag helm-comint helm-descbinds helm-ls-git
-                helm-make helm-mode-manager helm-org helm-projectile helm-purpose
-                helm-swoop helm-xref hide-comnt highlight-indentation
+                expand-region eyebrowse fancy-battery flycheck gh-md git-link
+                git-messenger git-modes git-timemachine gitignore-templates
+                golden-ratio google-translate helm-ag helm-comint helm-descbinds
+                helm-ls-git helm-make helm-mode-manager helm-org helm-projectile
+                helm-purpose helm-swoop helm-xref hide-comnt highlight-indentation
                 highlight-numbers highlight-parentheses hl-todo holy-mode
                 hungry-delete hybrid-mode indent-guide info+ inspector link-hint
                 lorem-ipsum macrostep markdown-toc multi-line nameless
@@ -624,7 +635,7 @@ This function is called at the very end of Spacemacs initialization."
                 term-cursor toc-org treemacs-evil treemacs-icons-dired
                 treemacs-magit treemacs-persp treemacs-projectile typst-preview
                 typst-ts-mode undo-fu-session vi-tilde-fringe volatile-highlights
-                vundo wgrep winum writeroom-mode ws-butler)))
+                vundo wgrep winum writeroom-mode ws-butler yaml-mode)))
   (custom-set-faces
    ;; custom-set-faces was added by Custom.
    ;; If you edit it by hand, you could mess it up, so be careful.
