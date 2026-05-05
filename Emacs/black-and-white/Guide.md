@@ -1,12 +1,17 @@
 # Replication guide
 ---
-### Dependencies
-## Pacman
+## Dependencies
+### Pacman
 ```bash
 sudo pacman -S emacs-wayland git adobe-source-code-pro-fonts tinymist
 ```
 Reload the font cache with `fc-cache -fv`.
-### Clone spacemacs and dotfiles
+## Backup
+---
+```bash
+mv .emacs.d .emacs.d.bak
+```
+## Clone spacemacs and dotfiles
 ```bash
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 git clone --depth=1 https://github.com/Flaxtrux/dotfiles.git ~/dotfiles
