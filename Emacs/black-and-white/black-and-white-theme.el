@@ -1,3 +1,4 @@
+;;; my-file.el --- description -*- lexical-binding: t -*-
 ;; black-and-white-theme.el — Spacemacs custom theme
 ;; Paleta basada en el tema de waybar/nvim
 
