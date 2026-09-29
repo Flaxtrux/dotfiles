@@ -9,9 +9,7 @@ yay -S mangowc-git
 ```bash
 sudo pacman -S emacs-wayland foot wmenu wl-clipboard grim slurp swaybg waybar thunar ttf-jetbrains-mono-nerd gnome-themes-extra swaylock
 ```
-## Git
 ```bash
-git clone --depth=1 https://github.com/Flaxtrux/dotfiles.git ~/dotfiles
 ```
 ---
 ## File Structure

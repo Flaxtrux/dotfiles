@@ -1,7 +1,6 @@
 # Dependencies
 ```bash
 pacman -S git zsh curl tree bat eza
-git clone --depth=1 https://github.com/Flaxtrux/dotfiles.git ~/dotfiles
 ```
 ##  Install Oh my zsh
 ```bash
