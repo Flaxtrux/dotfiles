@@ -49,12 +49,6 @@
 --   },
 -- })
 hl.config({
-	general = {
-		border_size = 2,
-		col = {
-			active_border = "rgba(ec7e7eff)",
-		},
-	},
 	decoration = {
 		rounding = 5,
 		blur = {
