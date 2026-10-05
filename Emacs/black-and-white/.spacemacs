@@ -53,7 +53,7 @@ This function should only modify configuration layer settings."
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;; spell-checking
-     syntax-checking
+     ;; syntax-checking
      ;; version-control
      treemacs
      git)
@@ -596,6 +596,14 @@ before packages are loaded."
   (add-hook 'typst-ts-mode-hook #'lsp)
   (setq powershell-location-of-exe "/usr/bin/pwsh")
   (add-hook 'powershell-mode-hook #'lsp)
+  (defun my/powershell-run-file ()
+    "Guarda y ejecuta el archivo actual con pwsh."
+    (interactive)
+    (save-buffer)
+    (compile (format "pwsh -NoProfile -File %s"
+                     (shell-quote-argument buffer-file-name))))
+  (spacemacs/set-leader-keys-for-major-mode 'powershell-mode
+    "c" #'my/powershell-run-file)
   (setq explicit-shell-file-name "/bin/zsh")
   (setq shell-file-name "/bin/zsh")
   )
