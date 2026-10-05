@@ -32,7 +32,9 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(javascript
+   '(python
+     lua
+     javascript
      yaml
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
@@ -51,7 +53,7 @@ This function should only modify configuration layer settings."
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;; spell-checking
-     ;; syntax-checking
+     syntax-checking
      ;; version-control
      treemacs
      git)
@@ -67,6 +69,7 @@ This function should only modify configuration layer settings."
    ;; Also include the dependencies as they will not be resolved automatically.
    dotspacemacs-additional-packages '(typst-ts-mode
                                       typst-preview
+                                      powershell
                                       (black-and-white-theme :location local))
 
    ;; A list of packages that cannot be updated.
@@ -591,6 +594,8 @@ before packages are loaded."
       :major-modes '(typst-ts-mode)
       :server-id 'tinymist)))
   (add-hook 'typst-ts-mode-hook #'lsp)
+  (setq powershell-location-of-exe "/usr/bin/pwsh")
+  (add-hook 'powershell-mode-hook #'lsp)
   (setq explicit-shell-file-name "/bin/zsh")
   (setq shell-file-name "/bin/zsh")
   )
@@ -609,37 +614,43 @@ This function is called at the very end of Spacemacs initialization."
    ;; Your init file should contain only one such instance.
    ;; If there is more than one, they won't work right.
    '(package-selected-packages
-     '(ace-link add-node-modules-path aggressive-indent all-the-icons auto-compile
-                auto-highlight-symbol avy-jump-helm-line bui centered-cursor-mode
-                clean-aindent-mode code-review column-enforce-mode company compat
-                dap-mode define-word devdocs diminish dired-quick-sort
-                disable-mouse dotenv-mode drag-stuff dumb-jump edit-indirect
-                elisp-def elisp-demos elisp-slime-nav emr eval-sexp-fu evil-anzu
-                evil-args evil-cleverparens evil-collection evil-easymotion
-                evil-escape evil-evilified-state evil-exchange evil-goggles
-                evil-iedit-state evil-indent-plus evil-lion evil-lisp-state
-                evil-matchit evil-mc evil-nerd-commenter evil-numbers
-                evil-surround evil-textobj-line evil-tutor evil-unimpaired
-                evil-visual-mark-mode evil-visualstar expand-region eyebrowse
-                fancy-battery flycheck ggtags gh-md git-link git-messenger
-                git-modes git-timemachine gitignore-templates golden-ratio
-                google-translate grizzl helm-ag helm-comint helm-descbinds
-                helm-ls-git helm-make helm-mode-manager helm-org helm-projectile
-                helm-purpose helm-swoop helm-xref hide-comnt highlight-indentation
+     '(ace-link add-node-modules-path aggressive-indent all-the-icons anaconda-mode
+                auto-compile auto-highlight-symbol avy-jump-helm-line blacken bui
+                centered-cursor-mode clean-aindent-mode code-cells code-review
+                column-enforce-mode company company-anaconda compat concurrent
+                ctable cython-mode dap-mode define-word devdocs diminish
+                dired-quick-sort disable-mouse dotenv-mode drag-stuff dumb-jump
+                edit-indirect elisp-def elisp-demos elisp-slime-nav emr epc
+                eval-sexp-fu evil-anzu evil-args evil-cleverparens evil-collection
+                evil-easymotion evil-escape evil-evilified-state evil-exchange
+                evil-goggles evil-iedit-state evil-indent-plus evil-lion
+                evil-lisp-state evil-matchit evil-mc evil-nerd-commenter
+                evil-numbers evil-surround evil-textobj-line evil-tutor
+                evil-unimpaired evil-visual-mark-mode evil-visualstar
+                expand-region eyebrowse fancy-battery flycheck ggtags gh-md
+                git-link git-messenger git-modes git-timemachine
+                gitignore-templates golden-ratio google-translate grizzl helm-ag
+                helm-comint helm-cscope helm-descbinds helm-ls-git helm-make
+                helm-mode-manager helm-org helm-projectile helm-purpose helm-pydoc
+                helm-swoop helm-xref hide-comnt highlight-indentation
                 highlight-numbers highlight-parentheses hl-todo holy-mode htmlize
-                hungry-delete hybrid-mode impatient-mode import-js indent-guide
-                info+ inspector js-doc js2-mode js2-refactor link-hint livid-mode
-                lorem-ipsum lsp-docker macrostep markdown-toc multi-line
-                multiple-cursors nameless nodejs-repl npm-mode open-junk-file
+                hungry-delete hybrid-mode impatient-mode import-js importmagic
+                indent-guide info+ inspector js-doc js2-mode js2-refactor
+                link-hint live-py-mode livid-mode load-env-vars lorem-ipsum
+                lsp-docker lsp-pyright macrostep markdown-toc multi-line
+                multiple-cursors nameless nodejs-repl nose npm-mode open-junk-file
                 org-superstar overseer page-break-lines paradox password-generator
-                pcre2el popwin prettier-js quickrun rainbow-delimiters
-                restart-emacs simple-httpd skewer-mode smeargle space-doc
-                spaceline spacemacs-purpose-popwin spacemacs-whitespace-cleanup
-                string-edit-at-point string-inflection symbol-overlay symon
-                term-cursor tern toc-org treemacs-evil treemacs-icons-dired
-                treemacs-magit treemacs-persp treemacs-projectile typst-preview
-                typst-ts-mode undo-fu-session vi-tilde-fringe volatile-highlights
-                vundo web-beautify wgrep winum writeroom-mode ws-butler yaml-mode)))
+                pcre2el pet pip-requirements pipenv pippel poetry popwin
+                prettier-js py-isort pydoc pyenv-mode pylookup python-pytest
+                pythonic pyvenv quickrun rainbow-delimiters reformatter
+                restart-emacs ruff-format simple-httpd skewer-mode smeargle
+                space-doc spaceline spacemacs-purpose-popwin
+                spacemacs-whitespace-cleanup sphinx-doc string-edit-at-point
+                string-inflection symbol-overlay symon term-cursor tern toc-org
+                treemacs-evil treemacs-icons-dired treemacs-magit treemacs-persp
+                treemacs-projectile typst-preview typst-ts-mode undo-fu-session uv
+                vi-tilde-fringe volatile-highlights vundo web-beautify wgrep winum
+                writeroom-mode ws-butler xcscope yaml-mode yapfify)))
   (custom-set-faces
    ;; custom-set-faces was added by Custom.
    ;; If you edit it by hand, you could mess it up, so be careful.

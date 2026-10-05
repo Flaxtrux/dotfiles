@@ -4,6 +4,7 @@
 ### Pacman
 ```bash
 sudo pacman -S emacs-wayland git adobe-source-code-pro-fonts tinymist
+yay -S powershell-bin
 ```
 Reload the font cache with `fc-cache -fv`.
 ## Backup
