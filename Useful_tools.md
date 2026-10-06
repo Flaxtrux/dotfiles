@@ -11,12 +11,11 @@
 - **yazi** (or **ranger**): terminal file manager with previews.
 - **dust** / **duf**: visual alternatives to `du` and `df` for checking disk usage.
 - **direnv**: automatically loads and unloads environment variables based on the current directory.
-- **just**: Make aliases in a projects root using a `justfile`.
-- **hyperfine**: benchmarking tool for comparing command execution times.
-- **lazydocker**: TUI for managing Docker/Podman containers, images, and logs (pairs well with distrobox).
+- **just**: Make aliases in a project's root using a `justfile`.
+- **lazydocker**: TUI for managing Docker/Podman containers, images, and logs.
   ### Less useful or more specific command line utilities
   - **avahi-browse**: lists local network services discovered via mDNS/Bonjour (printers, NAS, etc.).
-  - **nmap**: network and port scanner (complements avahi-browse).
+  - **nmap**: network and port scanner.
   - **btop**: resource monitor (CPU, RAM, disk, network) with a rich visual interface.
   - **distrobox**: creates containers of other Linux distros fully integrated with your system.
   - **jq**: command-line JSON processor for filtering and transforming data.
@@ -25,3 +24,4 @@
   - **bat**: `cat` replacement with syntax highlighting and line numbers.
   - **eza**: modern `ls` replacement with colors, icons, and Git integration.
   - **delta**: improves `git diff` output with syntax highlighting and side-by-side view.
+  - **hyperfine**: benchmarking tool for comparing command execution times.
