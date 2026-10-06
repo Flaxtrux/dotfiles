@@ -1,5 +1,6 @@
 # Tools
 ## Command line
+### Daily use tools
 - **fzf (fuzzy find)**: interactive fuzzy finder for filtering files, history, or any list from the terminal.
 - **z (zoxide)**: smarter `cd` replacement that learns your most-used directories and jumps to them with a few keystrokes.
 - **rg (ripgrep)**: blazing-fast recursive text search that respects `.gitignore`.
@@ -13,15 +14,16 @@
 - **direnv**: automatically loads and unloads environment variables based on the current directory.
 - **just**: Make aliases in a project's root using a `justfile`.
 - **lazydocker**: TUI for managing Docker/Podman containers, images, and logs.
-  ### Less useful or more specific command line utilities
-  - **avahi-browse**: lists local network services discovered via mDNS/Bonjour (printers, NAS, etc.).
-  - **nmap**: network and port scanner.
-  - **btop**: resource monitor (CPU, RAM, disk, network) with a rich visual interface.
-  - **distrobox**: creates containers of other Linux distros fully integrated with your system.
-  - **jq**: command-line JSON processor for filtering and transforming data.
-  - **httpie** (or **xh**): friendly HTTP client for testing APIs.
-  - **starship**: fast, customizable shell prompt that shows context (Git, language, etc.).
-  - **bat**: `cat` replacement with syntax highlighting and line numbers.
-  - **eza**: modern `ls` replacement with colors, icons, and Git integration.
-  - **delta**: improves `git diff` output with syntax highlighting and side-by-side view.
-  - **hyperfine**: benchmarking tool for comparing command execution times.
+### Less useful or more specific command line utilities
+- **avahi-browse**: lists local network services discovered via mDNS/Bonjour (printers, NAS, etc.).
+- **nmap**: network and port scanner.
+- **btop**: resource monitor (CPU, RAM, disk, network) with a rich visual interface.
+- **distrobox**: creates containers of other Linux distros fully integrated with your system.
+- **jq**: command-line JSON processor for filtering and transforming data.
+- **httpie** (or **xh**): friendly HTTP client for testing APIs.
+- **starship**: fast, customizable shell prompt that shows context (Git, language, etc.).
+- **bat**: `cat` replacement with syntax highlighting and line numbers.
+- **eza**: modern `ls` replacement with colors, icons, and Git integration.
+- **delta**: improves `git diff` output with syntax highlighting and side-by-side view.
+- **hyperfine**: benchmarking tool for comparing command execution times.
+- **snapper**: manages Btrfs filesystem snapshots so you can roll back your system after a bad update or change.
