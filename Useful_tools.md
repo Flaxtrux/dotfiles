@@ -5,7 +5,7 @@
 - **rg (ripgrep)**: blazing-fast recursive text search that respects `.gitignore`.
 - **fd**: simple, fast alternative to `find`.
 - **tldr**: simplified, example-driven versions of `man` pages.
-- **atuin**: stores your shell history in a database with advanced search and optional sync across machines.
+- **atuin**: stores your shell history in a database with advanced search and optional sync across machines use `C-r`.
 - **lazygit**: terminal UI (TUI) for managing Git quickly and visually.
 - **zellij**: modern terminal multiplexer (tmux alternative) with panes, tabs, and sessions.
 - **yazi** (or **ranger**): terminal file manager with previews.
