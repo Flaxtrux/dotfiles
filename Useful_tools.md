@@ -1,6 +1,7 @@
 # Tools
 ## Command line
 ### Daily use tools
+Installation command for my daily tools on Arch would be `sudo pacman -S fzf zoxide ripgrep fd tealdeer atuin lazygit zellij yazi dust duf direnv just lazydocker`.
 - **fzf (fuzzy find)**: interactive fuzzy finder for filtering files, history, or any list from the terminal.
 - **z (zoxide)**: smarter `cd` replacement that learns your most-used directories and jumps to them with a few keystrokes.
 - **rg (ripgrep)**: blazing-fast recursive text search that respects `.gitignore`.
