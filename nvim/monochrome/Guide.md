@@ -1,6 +1,7 @@
 # Dependencies
 ```bash
-pacman -S ttf-jetbrains-mono-nerd nvim git
+sudo pacman -S neovim git ripgrep fd ttf-jetbrains-mono-nerd
+git clone --depth=1 https://github.com/Flaxtrux/dotfiles.git ~/dotfiles
 ```
 ## Install LazyVim
 ```bash

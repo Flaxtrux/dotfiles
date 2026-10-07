@@ -10,7 +10,8 @@ Reload the font cache with `fc-cache -fv`.
 ## Backup
 ---
 ```bash
-mv .emacs.d .emacs.d.bak
+mv ~/.emacs.d ~/.emacs.d.bak 2>/dev/null
+mv ~/.spacemacs ~/.spacemacs.bak 2>/dev/null
 ```
 ## Clone spacemacs and dotfiles
 ```bash
@@ -27,4 +28,4 @@ Launch Emacs and let spacemacs install, after that copy the .spacemacs file into
 ```bash
 cp ~/dotfiles/Emacs/black-and-white/.spacemacs ~/.spacemacs
 ```
-Launch and use!
+Launch and use! If the icons look broken, run `M-x all-the-icons-install-fonts`.
