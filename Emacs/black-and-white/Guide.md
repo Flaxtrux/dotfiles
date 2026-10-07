@@ -16,7 +16,7 @@ mv ~/.spacemacs ~/.spacemacs.bak 2>/dev/null
 ## Clone spacemacs and dotfiles
 ```bash
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
-git clone --depth=1 https://github.com/Flaxtrux/dotfiles.git ~/dotfiles
+git clone https://github.com/Flaxtrux/dotfiles.git ~/dotfiles
 ```
 ---
 ## Apply the theme
