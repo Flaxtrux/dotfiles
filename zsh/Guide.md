@@ -1,7 +1,10 @@
 # Dependencies
 ```bash
+<<<<<<< HEAD
 sudo pacman -S git zsh curl bat eza fastfetch ttf-jetbrains-mono-nerd
 git clone https://github.com/Flaxtrux/dotfiles.git ~/dotfiles
+=======
+>>>>>>> 8ff5560 (added more tools and aliases)
 ```
 ## Install Oh my zsh
 ```bash
