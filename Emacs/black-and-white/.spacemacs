@@ -596,12 +596,14 @@ before packages are loaded."
   (add-hook 'typst-ts-mode-hook #'lsp)
   (setq powershell-location-of-exe "/usr/bin/pwsh")
   (add-hook 'powershell-mode-hook #'lsp)
-  (defun my/powershell-run-file ()
-    "Guarda y ejecuta el archivo actual con pwsh."
-    (interactive)
+  (defun my/powershell-run-file (args)
+    "Guarda y ejecuta el archivo actual con pwsh, pidiendo argumentos.
+La salida es interactiva (comint), así que se puede escribir en ella."
+    (interactive (list (read-string "Argumentos: ")))
     (save-buffer)
-    (compile (format "pwsh -NoProfile -File %s"
-                     (shell-quote-argument buffer-file-name))))
+    (compile (format "pwsh -NoProfile -File %s %s"
+                     (shell-quote-argument buffer-file-name) args)
+             t))
   (spacemacs/set-leader-keys-for-major-mode 'powershell-mode
     "c" #'my/powershell-run-file)
   (setq explicit-shell-file-name "/bin/zsh")
