@@ -601,9 +601,12 @@ before packages are loaded."
 La salida es interactiva (comint), así que se puede escribir en ella."
     (interactive (list (read-string "Argumentos: ")))
     (save-buffer)
-    (compile (format "pwsh -NoProfile -File %s %s"
-                     (shell-quote-argument buffer-file-name) args)
-             t))
+    (let ((process-connection-type nil))
+      (compile (format "pwsh -NoProfile -File %s %s"
+                       (shell-quote-argument
+                        (file-name-nondirectory buffer-file-name))
+                       args)
+               t)))
   (spacemacs/set-leader-keys-for-major-mode 'powershell-mode
     "c" #'my/powershell-run-file)
   (setq explicit-shell-file-name "/bin/zsh")
