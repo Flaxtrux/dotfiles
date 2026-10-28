@@ -611,6 +611,9 @@ La salida es interactiva (comint), así que se puede escribir en ella."
     "c" #'my/powershell-run-file)
   (setq explicit-shell-file-name "/bin/zsh")
   (setq shell-file-name "/bin/zsh")
+  (with-eval-after-load 'markdown-mode
+    (advice-add 'markdown-match-italic :override #'ignore)
+    (advice-add 'markdown-match-bold :override #'ignore))
   )
 
 
